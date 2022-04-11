@@ -20,8 +20,8 @@
             <td>@item.Name</td>
             <td>@item.Email</td>
             <td>@item.City</td>
-            <td><button type="button" class="btn btn-success">Edit</button></td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
+            <td><a asp-action="edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></td>
         </tr>
     }
 </table>

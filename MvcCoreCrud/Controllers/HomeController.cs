@@ -58,6 +58,14 @@ namespace MvcCoreCrud.Controllers
             return RedirectToAction("Index","Home");
         }
 
+        public IActionResult Delete(int Id)
+        {
+            var delitem = db.Employees.Where(a => a.Id == Id).First();
+            db.Employees.Remove(delitem);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Privacy()
         {
             return View();
