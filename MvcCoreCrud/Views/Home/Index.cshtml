@@ -1,0 +1,28 @@
+﻿@model List<MvcCoreCrud.Models.EmpModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.City</td>
+            <td><button type="button" class="btn btn-success">Edit</button></td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+    }
+</table>
+<a href="@Url.Action("AddEmp","Home")" class="btn btn-success">AddNew</a>
