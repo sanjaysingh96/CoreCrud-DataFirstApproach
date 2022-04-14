@@ -5805,11 +5805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Sanjay-TP6 .NET\\MvcCoreCrud\\MvcCoreCrud\\MvcCoreCrud.csproj",
+      "projectUniqueName": "C:\\Sanjay-TP6 .NET\\MvcCoreCrud\\MvcCoreCrud\\MvcCoreCrud.csproj",
       "projectName": "MvcCoreCrud",
-      "projectPath": "C:\\Users\\admin\\Desktop\\Sanjay-TP6 .NET\\MvcCoreCrud\\MvcCoreCrud\\MvcCoreCrud.csproj",
+      "projectPath": "C:\\Sanjay-TP6 .NET\\MvcCoreCrud\\MvcCoreCrud\\MvcCoreCrud.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\Sanjay-TP6 .NET\\MvcCoreCrud\\MvcCoreCrud\\obj\\",
+      "outputPath": "C:\\Sanjay-TP6 .NET\\MvcCoreCrud\\MvcCoreCrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

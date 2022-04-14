@@ -5,6 +5,8 @@
 
 }
 <form asp-controller="Home" asp-action="AddEmp" method="post">
+    @*@Html.HiddenFor(a=>a.Id)*@
+    <input type="hidden" asp-for="Id" />
     <h4>Add Employee</h4>
     <div class="form-group">
         <label>Name</label>

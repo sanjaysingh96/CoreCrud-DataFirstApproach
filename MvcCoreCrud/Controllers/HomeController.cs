@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MvcCoreCrud.DB_Context;
 using MvcCoreCrud.Models;
@@ -53,8 +54,16 @@ namespace MvcCoreCrud.Controllers
             tbl.Email = modobj.Email;
             tbl.City = modobj.City;
 
-            db.Employees.Add(tbl);
-            db.SaveChanges();
+            if (modobj.Id == 0)
+            {
+                db.Employees.Add(tbl);
+                db.SaveChanges();
+            }
+            else
+            {
+                db.Entry(tbl).State = EntityState.Modified;
+                db.SaveChanges();
+            }
             return RedirectToAction("Index","Home");
         }
 
@@ -65,6 +74,20 @@ namespace MvcCoreCrud.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Edit(int id)
+        {
+            EmpModel empmod = new EmpModel();
+            var edititem = db.Employees.Where(a => a.Id == id).First();
+            empmod.Id = edititem.Id;
+            empmod.Name = edititem.Name;
+            empmod.Email = edititem.Email;
+            empmod.City = edititem.City;
+
+            
+            return View("AddEmp",empmod);
+        }
+
 
         public IActionResult Privacy()
         {
